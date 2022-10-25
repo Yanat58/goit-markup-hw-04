@@ -136,15 +136,16 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
-}
-.contacts-icon:hover,
-.contacts-icon:focus {
-  fill: var(--accent-color);
+  fill: var(--primary-text-color);
 }
 
+.contacts-link:hover,
+.contacts-link:focus {
+  fill: var(--accent-color)
+}
 .contacts-icon {
   margin-right: 10px;
-  fill: var(--primary-text-color);
+  
 }
 
 /* hero overlay */
@@ -323,26 +324,24 @@ ul {
   margin-top: 16px;
 }
 
-.social-item,
-.contacts-social-item {
+.social-icon {
+  display: block;
   width: 44px;
   height: 44px;
   padding: 12px;
   border-radius: 50%;
 }
 
-.social-item:hover,
-.contacts-social-item:hover {
-  background-color: var(--accent-color);
-}
-.social-icon {
+.social-icon {  
   fill: var(--icon-color);
 }
 
-.social-icon:hover,
+.social-icon:hover ,
 .social-icon:focus {
   fill: var(--primary-white-color);
+  background-color: var(--accent-color);
 }
+
 
 /* section customers */
 
@@ -353,25 +352,20 @@ ul {
   gap: 30px;
 }
 
-.customers-item {
+.customers-icon {
   width: 170px;
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   padding: 16px 32px;
-}
-.customers-item:hover,
-.customers-item:focus {
-  border-color: var(--accent-color);
-}
-
-.customers-icon {
   fill: var(--icon-color);
 }
 .customers-icon:hover,
 .customers-icon:focus {
+  border-color: var(--accent-color);
   fill: var(--accent-color);
 }
+
 
 /* footer */
 
@@ -383,6 +377,7 @@ ul {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-part {
@@ -405,8 +400,7 @@ ul {
   color: var(--primary-white-color);
 }
 
-.contacts-social-wrap {
-  margin-top: 12px;
+.contacts-social-wrap {  
   margin-left: 70px;
 }
 
@@ -423,11 +417,20 @@ ul {
 .social {
   justify-content: flex-start;
 }
-.contacts-social-item {
+
+.contakts-social-icon { 
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%; 
   background-color: rgba(255, 255, 255, 0.1);
-}
-.contakts-social-icon {
   fill: var(--primary-white-color);
+}
+
+.contakts-social-icon:hover,
+.contakts-social-icon:focus {
+  background-color: var(--accent-color);
 }
 
 /* filter */
@@ -482,8 +485,11 @@ ul {
 .portfolio-item {
   max-width: 370px;
 }
-
-.portfolio-item:hover {
+.portfolio-link {
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
